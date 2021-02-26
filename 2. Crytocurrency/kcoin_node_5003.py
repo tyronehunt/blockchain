@@ -92,7 +92,7 @@ class Blockchain:
     def add_node(self, address):
         """Add node containing that address to set of nodes"""
         parsed_url = urlparse(address)
-        self.nodes.add(parsed_url.netlock)
+        self.nodes.add(parsed_url.netloc)
             
     def replace_chain(self):
         """ Check if node is up to date (longest chain) and replace if not """
